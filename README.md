@@ -21,7 +21,7 @@
 ## Installation and usage
 
 ```
-git clone https://github.com/Peanutz/affility-tr
+git clone https://github.com/nihilas/bonzaidigital-tr
 cd bonzaidigital-tr
 bundle install --binstubs
 vagrant up
