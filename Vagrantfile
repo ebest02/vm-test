@@ -6,7 +6,7 @@ export DEBIAN_FRONTEND=noninteractive
 
 echo "Pre-install nginx php mysql"
 apt-get update
-apt-get install -y php5-fpm php5-cli nginx mysql-server php5-mysql curl
+apt-get install -y apache2 php5-fpm php5-cli nginx mysql-server php5-mysql curl
 
 echo "Pre-install Node, Bower, Grunt"
 test -x /usr/local/bin/node || {
@@ -25,6 +25,7 @@ apt-get install -y git &>/dev/null
 echo "Setup project directory"
 test -d /var/www/bonzaidigital-test-recrutement || {
   sudo mkdir -p /var/www/bonzaidigital-test-recrutement
+  git clone https://github.com/ebest02/test.git
   chown vagrant.vagrant /var/www/bonzaidigital-test-recrutement
 } &>/dev/null
 
