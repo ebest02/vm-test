@@ -25,8 +25,9 @@ apt-get install -y git &>/dev/null
 echo "Setup project directory"
 test -d /var/www/bonzaidigital-test-recrutement || {
   sudo mkdir -p /var/www/bonzaidigital-test-recrutement
+  cd /var/www/bonzaidigital-test-recrutement
   git clone https://github.com/ebest02/test.git
-  chown vagrant.vagrant /var/www/bonzaidigital-test-recrutement
+  chown -R vagrant.vagrant /var/www/bonzaidigital-test-recrutement
 } &>/dev/null
 
 echo "Pre-install composer"
@@ -39,10 +40,10 @@ SCRIPT
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = 'hashicorp/precise64'
+  config.vm.box = 'precise64'
   config.vm.network 'forwarded_port', guest: 80, host: 8080
   config.vm.network 'forwarded_port', guest: 3306, host: 33060
-
+  config.vm.provision :shell, :path => "install.sh"
   config.vm.provider 'virtualbox' do |v|
     v.memory = 4096
     v.cpus   = 2
