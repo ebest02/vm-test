@@ -3,7 +3,7 @@ lock '3.2.1'
 set :application, 'bonzaidigital-test-recrutement'
 # put your repo URL here 
 # ex : git@github.com:Peanutz/my_super_repo.git
-set :repo_url, 'git@github.com:nihilas/bonzaidigital-demo-tr.git'
+set :repo_url, 'git@github.com:/ebest02/test.git'
 # branch, either default or master, that's just you
 set :branch, 'master'
 set :use_sudo, false
