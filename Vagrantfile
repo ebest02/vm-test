@@ -28,6 +28,7 @@ test -d /var/www/bonzaidigital-test-recrutement || {
   cd /var/www/bonzaidigital-test-recrutement
   git clone https://github.com/ebest02/test.git
   cp -rvp /var/www/bonzaidigital-test-recrutement/test/test/* /var/www/bonzaidigital-test-recrutement
+  rm -rf /var/www/bonzaidigital-test-recrutement/test
   chown -R vagrant.vagrant /var/www/bonzaidigital-test-recrutement
 } &>/dev/null
 
