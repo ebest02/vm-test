@@ -1,4 +1,4 @@
-# Bonzaï Digital recruitement test
+# Recruitement test
 
   > Machine virtuelle pour le test de recrutement 
 
@@ -28,3 +28,7 @@ Allez sur la page http://localhost:8080, vous devriez me voir et découvrir ma l
   > Le fichier Vagrantfile permet de créer la VM. Il récupère le dépot git de l'application ZEND. 
   > En fin d'installation le script install.sh est exécuté :  il se charge de créer la base MySQL, le VHOST NGINX et configure PHP (fichiers dans data) 
 
+	==> default: Configuring MySQL for test app
+	==> default: Configuring Nginx
+	==> default: Configuring PHP
+	==> default: EVERYTHING OK
